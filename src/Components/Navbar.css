@@ -1,0 +1,42 @@
+.flex{
+padding: 10px 2%;
+justify-content: space-between;
+box-shadow: 0 0 10px  rgba(0, 0, 0, 0.2);
+background-color: white;
+position: sticky;
+top:0;
+z-index: 10;
+}
+ .menu{
+    width: 22px;
+    margin-left: 20px;
+  
+}
+ .left .logo{
+    width: 130px;
+    margin-left: 15px;
+}
+.center .search{
+    border: 1px solid white;
+    margin-right: 15px;
+    padding:8px 12px;
+    border-radius: 25px;
+}
+.center .search input{
+    width:400px;
+    border:0px;
+    outline: 0px;
+    background: transparent;
+    
+}
+.center .search img{
+    width:15px;
+}
+.right img{
+    width:25px;
+    margin-left: 25px;
+}
+.right .profile{
+    width: 35px;
+    border-radius: 50%;
+}

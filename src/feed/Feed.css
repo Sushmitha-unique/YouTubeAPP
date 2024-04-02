@@ -1,0 +1,11 @@
+.feed{
+    display: grid;
+   grid: repeat (3,400px) / auto-flow 100px;
+    grid-column-gap:16px;
+    grid-row-gap:30px;
+    margin-top:15px;
+   
+}
+.feed .card{
+    margin-left: 200px;
+}
