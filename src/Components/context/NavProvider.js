@@ -5,6 +5,7 @@ const Navprovider = (props) =>{
     const [sidechange,setsidechange] = useState(true)
     const [term,setterm] = useState("")
     const [video,setvideo] = useState([])
+    const [videoid,setvideoid]=useState("")
     return(
         <Navcontext.Provider value={
             {
@@ -13,7 +14,9 @@ const Navprovider = (props) =>{
                 video:video,
                 setvideo:setvideo,
                 term:term,
-                setterm:setterm
+                setterm:setterm,
+                videoid:videoid,
+                setvideoid:setvideoid
             }
         }>
           {props.children}

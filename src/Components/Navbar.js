@@ -10,27 +10,26 @@ import "./Navbar.css"
 import Navcontext from './context/Navcontext'
 import axios from 'axios'
 const Navbar = () => {
-  const {sidechange,setsidechange,term,setterm,setvideo} =useContext(Navcontext);
+  const {sidechange,setsidechange,term,setterm,video,setvideo} =useContext(Navcontext);
    function Hello(){
     setsidechange(!sidechange)
   }
    async function show(){
     try{
-      const response = await axios.get("https://youtube-v31.p.rapidapi.com/search" , {
-          headers:{
-              'X-RapidAPI-Key': '62bc180b27mshe139761ff85c18ep12ec1ejsna8a2aed75283',
-               'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
-          },
+      const response = await axios.get("https://youtube138.p.rapidapi.com/search/" , {
+         
           params: {
               q: term || "random",
-              part: 'snippet,id',
-              regionCode: 'US',
-              maxResults: '25',
-              order: 'date'
-            }
+              hl: 'en',
+              gl: 'US',
+            },
+            headers:{
+              'X-RapidAPI-Key': '62bc180b27mshe139761ff85c18ep12ec1ejsna8a2aed75283',
+               'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+          }
       })
       console.log(response.data);
-      setvideo(response.data.items);
+      setvideo(response.data.contents);
       setterm("")
   }
   catch(error){
