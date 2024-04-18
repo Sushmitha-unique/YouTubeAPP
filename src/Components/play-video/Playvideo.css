@@ -1,4 +1,21 @@
 .play-video{
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 80px;
+    display :flex;
+    justify-content: center;
 }
+.video-and-suggestions {
+    display: flex;
+  }
+  .video-container {
+    margin-right: 20px; 
+  }
+video { 
+    border-radius: 40px; 
+    overflow: hidden; 
+} 
+.card2 img {
+    width: 400px;
+  height: 200px;
+  border-radius: 20px;
+  }

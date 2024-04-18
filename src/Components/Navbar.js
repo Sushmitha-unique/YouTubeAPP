@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import menu from "../assets/menu.png"
-import logo from "../assets/logo.png"
+import logo from "../assets/logoimg.png"
 import search from "../assets/search.png"
 import upload from "../assets/upload.png"
 import more from "../assets/more.png"
@@ -10,13 +10,13 @@ import "./Navbar.css"
 import Navcontext from './context/Navcontext'
 import axios from 'axios'
 const Navbar = () => {
-  const {sidechange,setsidechange,term,setterm,video,setvideo} =useContext(Navcontext);
+  const {sidechange,setsidechange,term,setterm,setvideo} =useContext(Navcontext);
    function Hello(){
     setsidechange(!sidechange)
   }
    async function show(){
     try{
-      const response = await axios.get("https://youtube138.p.rapidapi.com/search/" , {
+      const response = await axios.get("https://youtube-data8.p.rapidapi.com/search/" , {
          
           params: {
               q: term || "random",
@@ -24,8 +24,8 @@ const Navbar = () => {
               gl: 'US',
             },
             headers:{
-              'X-RapidAPI-Key': '62bc180b27mshe139761ff85c18ep12ec1ejsna8a2aed75283',
-               'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+              'X-RapidAPI-Key': 'd84af14033msh816ef172356aa9ap18e505jsn8d5c0f0e9482',
+                   'X-RapidAPI-Host': 'youtube-data8.p.rapidapi.com'
           }
       })
       console.log(response.data);
