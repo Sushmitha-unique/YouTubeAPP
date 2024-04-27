@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import menu from "../assets/menu.png"
 import logo from "../assets/logoimg.png"
 import search from "../assets/search.png"
@@ -14,6 +14,9 @@ const Navbar = () => {
    function Hello(){
     setsidechange(!sidechange)
   }
+  useEffect(()=>{
+    show()
+},[])
    async function show(){
     try{
       const response = await axios.get("https://youtube-data8.p.rapidapi.com/search/" , {
